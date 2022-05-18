@@ -46,12 +46,17 @@ include('db_connection.php');
                             <th scope="row">'.$id.'</th>
                             <td>'.$username.'</td>
                             <td>'.$email.'</td>
-                            <td>'.$password.'</td>
+                            <td>'.$password. '</td>
+                            <td>
+                              <a href="update.php" class="btn btn-primary stretched-link">UPDATE</a>
+                              <a href="delete.php" class="btn btn-primary stretched-link">DELETE</a>
+                            </td>
                           </tr>';
                       }
                   }
 
                 ?>
+
                 <!--
                 <tr>
                     <th scope="row">1</th>
