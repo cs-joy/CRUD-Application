@@ -1,6 +1,6 @@
 <?php
 
-include('E:\dbConnection\db_setting.php');
+include('../../../dbConnection/db_setting.php');
 $connection = new mysqli($hostname, $username, $password, $database_name);
 
 if(!$connection) {
