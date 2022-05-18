@@ -7,7 +7,7 @@ if(isset($_POST['submit'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $sql_query = "INSERT INTO `user_info` (username, email, password) VALUES('$username', '$email', '$password')";
+    $sql_query = "INSERT INTO `user_info` (`username`, `email`, `password`) VALUES('$username', '$email', '$password')";
 
     $result = mysqli_query($connection, $sql_query);
 
@@ -45,7 +45,7 @@ if(isset($_POST['submit'])) {
                 <label class="form-label">Password</label>
                 <input type="password" class="form-control" name="password" placeholder="Enter your password" autocomplete="off">
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" name="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
 </body>
