@@ -1,3 +1,10 @@
+
+<?php
+
+include('db_connection.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,6 +30,28 @@
                 </tr>
             </thead>
             <tbody>
+                <?php
+
+                  $sql_query = "SELECT * FROM `user_info`";
+
+                  $execute_query = mysqli_query($connection, $sql_query);
+                  if($execute_query) {
+                      while($row = mysqli_fetch_assoc($execute_query)) {
+                          $id = $row['id'];
+                          $username = $row['username'];
+                          $email = $row['email'];
+                          $password = $row['password'];
+                          echo '
+                          <tr>
+                            <th scope="row">'.$id.'</th>
+                            <td>'.$username.'</td>
+                            <td>'.$email.'</td>
+                            <td>'.$password.'</td>
+                          </tr>';
+                      }
+                  }
+
+                ?>
                 <!--
                 <tr>
                     <th scope="row">1</th>
