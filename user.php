@@ -12,7 +12,8 @@ if(isset($_POST['submit'])) {
     $result = mysqli_query($connection, $sql_query);
 
     if ($result) {
-        echo "Data Inserted Successfully";
+        //echo "Data Inserted Successfully";
+        header('location:display.php');
     } else {
         die(mysqli_error($connection));
     }
