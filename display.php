@@ -48,8 +48,8 @@ include('db_connection.php');
                             <td>'.$email.'</td>
                             <td>'.$password. '</td>
                             <td>
-                              <a href="update.php" class="btn btn-primary stretched-link">UPDATE</a>
-                              <a href="delete.php" class="btn btn-primary stretched-link">DELETE</a>
+                              <button class="btn btn-primary"><a href="update.php?updateid='.$id.'" class="text-light">UPDATE</a></button>
+                              <button class="btn btn-danger"><a href="delete.php?deleteid='.$id.'" class="text-light">DELETE</a></button>
                             </td>
                           </tr>';
                       }
