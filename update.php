@@ -21,8 +21,8 @@ if(isset($_POST['update'])) {
     $result = mysqli_query($connection, $sql_query);
 
     if ($result) {
-        echo "Updated Successfully";
-        //header('location:display.php');
+        //echo "Updated Successfully";
+        header('location:display.php');
     } else {
         die(mysqli_error($connection));
     }
