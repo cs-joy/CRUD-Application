@@ -9,7 +9,8 @@
     $executing_query = mysqli_query($connection, $sql_query);
 
     if ($executing_query) {
-        echo "Data Removed Successfully";
+        //echo "Data Removed Successfully";
+        header('location:display.php');
     } else {
         die(mysqli_error($connection));
     }
